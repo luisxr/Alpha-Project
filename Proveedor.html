@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form class="col s12" action="post">
+                <div class="row">
+                    <h2>Proveedor</h2>
+                    <div class="input-field col s12 m6">
+                        <input id="npro" name="npro" type="text" class="validate">
+                        <label for="npro">Nombre del proveedor</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <input id="cont" name="cont" type="text" class="validate">
+                        <label for="cont">Contacto</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <input id="tel1" name="tel1" type="number" class="validate">
+                        <label for="tel1">Telefono 1</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <input id="tel2" name="tel2" type="number" class="validate">
+                        <label for="tel2">Telefono 2</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="ce" name="ce" type="email" class="validate">
+                        <label for="ce">correo electronico 1</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="ce2" name="ce2" type="email" class="validate">
+                        <label for="ce2">Correo electronico 2</label>
+                    </div>
+                    <div class="col s12 m6">
+                        <h6>Ingrese el municipio</h6>
+                        <select id="mun" name="mun" class="browser-default">
+                            <option>Elija una opcion</option>
+                        </select>
+                    </div>
+
+                    <div class=" col s12 m6">
+                        <h6>Ingrese la colonia</h6>
+                        <select id="col" name="col" class="browser-default">
+                            <option value="">Elija una opcion</option>
+                        </select>
+                    </div>
+
+                    <div class=" col s12 m6">
+                        <h6>Ingrese el codigo postal</h6>
+                        <select id="cp" name="cp" class="browser-default">
+                            <option value="">Elija una opcion</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="calle" name="calle" type="text" class="validate">
+                        <label for="calle">Calle</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="nex" name="nex" type="number" class="validate">
+                        <label for="nex">Numero exterior</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="nint" name="nint" type="number" class="validate">
+                        <label for="nint">Numero interior</label>
+                    </div>
+                </div>
+
+            </form>
+            <center>
+                <button class="btn waves-effect blue  type=" submit" name="action">Registrar
+                    <i class="material-icons right">send</i>
+                </button>
+                <button class="btn waves-effect red  type=" submit" name="action">Cancelar
+                    <i class="material-icons right">cancel</i>
+                </button>
+            </center>
+        </div>
+    </div>
+    <table class="responsive-table">
+        <thead>
+            <tr>
+                <th>Proveedor</th>
+                <th>contacto</th>
+                <th>Telfono1</th>
+                <th>Telefono2</th>
+                <th>Correo1</th>
+                <th>Correo2</th>
+                <th>Estado</th>
+                <th>Municipio</th>
+                <th>Colonia</th>
+                <th>CodigoP</th>
+                <th>Calle</th>
+                <th>No EXT</th>
+                <th>No INT</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--Aqui va los resultados de la tabla ejemplo-->
+            <tr>
+                <td>Proveedor</td>
+                <td>contacto</td>
+                <td>Telfono1</td>
+                <td>Telefono2</td>
+                <td>Correo1</td>
+                <td>Correo2</td>
+                <td>Estado</td>
+                <td>Municipio</td>
+                <td>Colonia</td>
+                <td>CodigoP</td>
+                <td>Calle</td>
+                <td>No EXT</td>
+                <td>No INT</td>
+
+                <td> <button class="btn waves-effect green accent-4  type=" submit" name="action"><i
+                            class="material-icons">edit</i></button></td>
+                <!--estos van a ser los que modifique o elimine-->
+                <td><button class="btn waves-effect red  type=" submit" name="action"><i
+                            class="material-icons">delete_forever</i></button></</td> </tr> </tbody> </table>
+
+
+
+                        <!--JavaScript at end of body for optimized loading-->
+                    <script type="text/javascript" src="js/materialize.min.js"></script>
+                    <script>
+                        $(document).ready(function () {
+                            M.AutoInit();
+                            M.updateTextFields();
+
+                        });
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var elems = document.querySelectorAll('select');
+                            var instances = M.FormSelect.init(elems, options);
+                        });
+                    </script>
+
+</body>
+
+
+</html>
